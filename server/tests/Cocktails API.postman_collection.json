@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "d1c9ba91-4cf4-46b9-ae4c-b202a6b36ea8",
+		"name": "Cocktails API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23176601"
+	},
+	"item": [
+		{
+			"name": "Post Cocktails",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Dry MArtini\",\r\n        \"glass\": \"Martini Glass\",\r\n        \"ingredients\": [\r\n            {\r\n                    \"_id\": \"6321f928f797723100a5de8a\"\r\n            },\r\n            {\r\n                    \"_id\": \"6321f92ff797723100a5de8c\"\r\n            }\r\n        ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/cocktails/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cocktails",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post ingredient",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/ingredients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ingredients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cocktails",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/cocktails/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cocktails",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get cocktail ingredients",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/cocktails/:id/ingredients/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cocktails",
+						":id",
+						"ingredients",
+						""
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6321fa94360833132861fd52"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete cocktail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/cocktails/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cocktails",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6321fa94360833132861fd52"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change cocktail",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n        {\r\n            \"_id\": \"6321fa94360833132861fd52\",\r\n            \"name\": \"Mimosa\",\r\n            \"glass\": \"Martini Glass\",\r\n            \"ingredients\": [\r\n                {\r\n                    \"_id\": \"6321f928f797723100a5de8a\"\r\n                },\r\n                {\r\n                    \"_id\": \"6321f92ff797723100a5de8c\"\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/cocktails/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cocktails",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6321fa94360833132861fd52"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

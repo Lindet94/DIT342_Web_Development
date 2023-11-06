@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "beb4d038-6c5f-4435-89bf-3ab161ac0ddc",
+		"name": "Bars API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23176601"
+	},
+	"item": [
+		{
+			"name": "Add bar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Crowbar\",\r\n    \"adress\": \"Avenue Street 1\",\r\n    \"openingHours\": \"17:00 - 02:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bars/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bars",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete bar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/bar/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bar",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all bars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/bars/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bars",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific bar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/bar/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bar",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "632614757d43ac29948df944"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get only bar names",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/bars/names",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bars",
+						"names"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put bar",
+			"request": {
+				"method": "PUT",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

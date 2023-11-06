@@ -1,0 +1,411 @@
+{
+	"info": {
+		"_postman_id": "c1203ece-3bce-4f3a-8cf9-c47fa00d591f",
+		"name": "users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23222849"
+	},
+	"item": [
+		{
+			"name": "GET /api/users",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/users",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /api/users/:id",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/users/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "631b9b23464eac4ab870b462"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /api/users/:id",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/users/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "632317b0d2b24649088d3bcb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /api/users/register",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"hej@hej.hej\",\r\n    \"username\": \"tww\",\r\n    \"password\": \"12345678\",\r\n    \"passwordCheck\": \"12345678\",\r\n    \"cocktailMocktail\": \"cocktail\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/users/register",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /api/users/login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"hej@hej.hej\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/users/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /api/users/token-is-valid",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM2OTc3OTgsImV4cCI6MTY2MzY5NzgyOCwiYXVkIjoiNjMyYTAyOWE1NzNjOWY1MzEwMTJlNWU5In0.gxh_Pv8L5gxaQ2wta2EOoUUo4JwwTxr1RQZqFEccYks",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/users/token-is-valid",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"token-is-valid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /api/users/refresh-token-is-valid",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "refreshToken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM2OTgxNjUsImV4cCI6MTY2NjM3NjU2NSwiYXVkIjoiNjMyYTAyOWE1NzNjOWY1MzEwMTJlNWU5In0.hQ8GbJylf829421OibIsW_k10Cn4W75BeZHpyJarLVM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/users/refresh-token-is-valid",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"refresh-token-is-valid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /api/users/invalidate-token",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "refreshToken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM2OTc3OTgsImV4cCI6MTY2NjM3NjE5OCwiYXVkIjoiNjMyYTAyOWE1NzNjOWY1MzEwMTJlNWU5In0.1T-AygBb3pSOJkvjcW55B9xY0oBYG-P0xFazexhWuUk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/users/invalidate-token",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"invalidate-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /api/users/new-tokens",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "refreshToken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjVjMjMxOTA1OGMzODM4OGY5MTk0MyIsImlhdCI6MTY2MzQ5NTQ3NSwiZXhwIjoxNjYzNDk1NDc1fQ.LIwdsro1Pwrt06yXc84ucFlXGdZ_TP5zj4XkuSTbs94",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM2OTgxNjUsImV4cCI6MTY2MzY5ODE5NSwiYXVkIjoiNjMyYTAyOWE1NzNjOWY1MzEwMTJlNWU5In0.GB4rF0kHxuDR9QvumFF40pPq8G2vFCY-rXAf7ZxS51E\",\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjM2OTgxNjUsImV4cCI6MTY2NjM3NjU2NSwiYXVkIjoiNjMyYTAyOWE1NzNjOWY1MzEwMTJlNWU5In0.hQ8GbJylf829421OibIsW_k10Cn4W75BeZHpyJarLVM\",\r\n    \"user\": {\r\n        \"id\": \"632a029a573c9f531012e5e9\",\r\n        \"username\": \"tww\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/users/new-tokens",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"new-tokens"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
